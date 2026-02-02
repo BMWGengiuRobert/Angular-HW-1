@@ -7,6 +7,9 @@ import { HeaderComponent } from './feature/passengers/components/header/header.c
 import { TableComponent } from './feature/passengers/components/table/table.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RowComponent } from './feature/passengers/components/row/row.component';
+import { SurvivorPipe } from './feature/passengers/pipes/survivor.pipe';
+import { CityPipe } from './feature/passengers/pipes/city.pipe';
+import { PassengerNamePipe } from './feature/passengers/pipes/passengerName.pipe';
 
 const routes: Routes = [];
 
@@ -16,6 +19,9 @@ const routes: Routes = [];
     HeaderComponent,
     TableComponent,
     RowComponent,
+    SurvivorPipe,
+    CityPipe,
+    PassengerNamePipe,
   ],
   imports: [
     BrowserModule,

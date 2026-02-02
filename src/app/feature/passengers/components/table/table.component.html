@@ -16,6 +16,16 @@
         </tr>
     </thead>
     <tbody>
-        <app-row *ngFor="let passenger of dataOfPassengers" [dataOfPassenger]="passenger"></app-row>
+        <app-row *ngFor="let passenger of getPassengersForPage()" [dataOfPassenger]="passenger"></app-row>
     </tbody>
+</div>
+
+<div class="pagination-controls">
+    <button (click)="currentPage = 1">First</button>
+    <button (click)="goToPreviousPage()" [disabled]="currentPage === 1">Previous</button>
+
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+
+    <button (click)="goToNextPage()" [disabled]="currentPage === totalPages">Next</button>
+    <button (click)="currentPage = totalPages">Last</button>
 </div>
