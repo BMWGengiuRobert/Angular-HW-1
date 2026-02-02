@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './feature/passengers/components/header/header.component';
+import { TableComponent } from './feature/passengers/components/table/table.component';
+import { AppRoutingModule } from './app-routing.module';
+import { RowComponent } from './feature/passengers/components/row/row.component';
 
 const routes: Routes = [];
 
@@ -11,11 +14,13 @@ const routes: Routes = [];
   declarations: [
     AppComponent,
     HeaderComponent,
+    TableComponent,
+    RowComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule,
   ],
   providers: [provideBrowserGlobalErrorListeners(), provideZonelessChangeDetection()],
   bootstrap: [AppComponent],
